@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <input name="Month" type="number" id="month"></input>
+        <button type="submit" value="Tính số ngày" onclick="search()">Tính số ngày</button>
+    </form>
+    <script>
+        function search() {
+            var Month = parseInt(document.getElementById("month").value);
+            switch (Month) {
+                case 1:
+                case 4:
+                case 6:
+                case 8:
+                case 10:
+                case 12:
+                alert( "Tháng "+ Month+ " có 31 ngày");
+                    break;
+                case 2:
+                    alert( "Tháng "+ Month+ " có 28 hoặc 29 ngày");
+                    break;
+                default:
+                    alert( "Tháng "+ Month+ " có 30 ngày")
+                    break;
+            }
+        }
+    </script>
+</body>
+
+</html>
