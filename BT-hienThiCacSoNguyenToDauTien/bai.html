@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num;
+        do {
+            num = prompt("Nhập số lượng số nguyên tố cần in ra");
+            if (!isNaN(num)) {
+                break;
+            } else {
+                alert("Vui lòng nhập một số");
+            }
+        } while (isNaN(num));
+        function check_snt(num) {
+            let number1 = 2;
+            let count = 0;
+            let txt = "";
+            for (number1; ; number1++) {
+                let count1 = 0;
+                for (let number2 = 2; number2 <= number1; number2++) {
+                    if (number1 % number2 == 0) {
+                        count1 += 1;
+                    }
+                }
+                if (count1 == 1) {
+                    txt = txt + number1 + " ";
+                    count += 1;
+
+                }
+                if (count == num) {
+                    alert(txt);
+                    break;
+                }
+               
+            }
+        } check_snt(num);
+    </script>
+</body>
+
+</html>
