@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let test, midtermTest, finalTest;
+        do {
+            test = parseInt(prompt("Enter test scores"));
+            if (!isNaN(test)) {
+                break;
+            } else {
+                alert("Please enter a number");
+            }
+        } while (isNaN(test));
+        do {
+            midtermTest = parseInt(prompt("Enter midterm test scores"));
+            if (!isNaN(midtermTest)) {
+                break;
+            } else {
+                alert("Please enter a number");
+            }
+        } while (isNaN(midtermTest));
+        do {
+            finalTest = parseInt(prompt("Enter final test scores"));
+            if (!isNaN(finalTest)) {
+                break;
+            } else {
+                alert("Please enter a number");
+            }
+        } while (isNaN(finalTest));
+        function ranking(test, midtermTest, finalTest) {
+            let mediumScore = (test + midtermTest * 2 + finalTest * 3) / 6;
+            alert("Medium scores is "+mediumScore);
+            if (mediumScore >= 8) {
+                alert("Rank A");
+            } else if (mediumScore >= 6.5) {
+                alert("Rank B");
+            } else if (mediumScore >= 5) {
+                alert("Rank C");
+            } else if (mediumScore >= 3.5) {
+                alert("Rank D");
+            } else {
+                alert("Rank F");
+            }
+        } ranking(test, midtermTest, finalTest);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let doanhSo;
+        do{
+            doanhSo=parseInt(prompt("Nhập doanh số"));
+            if(!isNaN(doanhSo)){
+                break;
+            }else alert("Please enter a number");
+        }while(isNaN(doanhSo));
+        function check(doanhSo){
+            let hoaHong;
+            if(doanhSo>10000000){
+                hoaHong=doanhSo*0.05;
+            }else if(doanhSo>5000000){
+                hoaHong=doanhSo*0.02;
+            }else if(doanhSo>1000000){
+                hoaHong=doanhSo*0.005;
+            }else hoaHong=0;
+            alert("Hoa hồng được hưởng là "+hoaHong);
+        }check(doanhSo);
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let inputa,inputb,inputc;
+        do{
+            inputa=parseInt(prompt("Enter first number"));
+            if(!isNaN(inputa)){
+                break;
+            }else{
+                alert("Please enter a number");
+            }
+        }while(isNaN(inputa));
+        do{
+            inputb=parseInt(prompt("Enter second number"));
+            if(!isNaN(inputb)){
+                break;
+            }else{
+                alert("Please enter a number");
+            }
+        }while(isNaN(inputb));
+        do{
+            inputc=parseInt(prompt("Enter third number"));
+            if(!isNaN(inputc)){
+                break;
+            }else{
+                alert("Please enter a number");
+            }
+        }while(isNaN(inputc));
+        function check(inputa,inputb,inputc){
+            if(inputa>inputb){
+                if(inputa>inputc){
+                    alert(inputa+" is maximum value");
+                }else alert(inputc+" is maximum value");
+            }else if(inputb>inputc){
+                alert(inputb+" is maximum value");
+            }else alert(inputc+" is maximum value");
+        }check(inputa,inputb,inputc);
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let inputa,inputb;
+        do{
+            inputa=parseInt(prompt("Enter first number"));
+            if(!isNaN(inputa)){
+                break;
+            }else{
+                alert("Please enter a number");
+            }
+        }while(isNaN(inputa));
+        do{
+            inputb=parseInt(prompt("Enter second number"));
+            if(!isNaN(inputb)){
+                break;
+            }else{
+                alert("Please enter a number");
+            }
+        }while(isNaN(inputb));
+        function check(inputa,inputb){
+            if(inputa%inputb==0){
+                alert(inputa+" chia hết cho "+inputb);
+            }else alert(inputa+" không chia hết cho "+inputb);
+        }check(inputa,inputb);
+
+
+    </script>
+</body>
+</html>

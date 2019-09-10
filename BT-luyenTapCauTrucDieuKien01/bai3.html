@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let anyNumber;
+        do {
+            anyNumber = parseInt(prompt("Enter any number"));
+            if (!isNaN(anyNumber)) {
+                break;
+            } else alert("Please enter a number");
+        } while (isNaN(anyNumber));
+        function check(anyNumber) {
+            if (anyNumber === 0) {
+                alert(anyNumber + " equal 0");
+            } else if (anyNumber === Math.abs(anyNumber)) {
+                alert(anyNumber + " is larger than 0");
+            } else {
+                alert(anyNumber + " is less than 0");
+            }
+        }check(anyNumber);
+    </script>
+</body>
+
+</html>
