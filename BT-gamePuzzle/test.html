@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="change" style="box-shadow: 2px 2px 30px 10px yellowgreen; width: 300px;">
+        <img src="anh1_1.jpg" id="pic1" alt="1" onclick="click1()" width="300" height="100"><br>
+        <img src="anh1_2.jpg" id="pic2" alt="2" onclick="click2()" width="300" height="100"><br>
+        <img src="anh1_3.jpg" id="pic3" alt="3" onclick="click3()" width="300" height="100"><br>
+    </div>
+    <script>
+        let round1 = document.getElementById("pic1");
+        let round2 = document.getElementById("pic2");
+        let round3 = document.getElementById("pic3");
+        function click1() {
+            let Random = Math.floor((Math.random() * 3) + 1);
+            switch (Random) {
+                case 1:
+                round1.src = 'anh1_1.jpg';
+                   round1.alt = 1;
+                    break;
+                case 2:
+                round1.src = 'anh2_1.jpg';
+                   round1.alt = 2;
+                    break;
+                case 3:
+                round1.src = 'anh3_1.jpg';
+                   round1.alt = 3;
+                    break;
+            }finish();
+        }
+        function click2() {
+            let Random = Math.floor((Math.random() * 3) + 1);
+            switch (Random) {
+                case 1:
+                round2.src = "anh1_2.jpg";
+                   round2.alt = 1;
+                    break;
+                case 2:
+                round2.src = "anh2_2.jpg";
+                   round2.alt = 2;
+                    break;
+                case 3:
+                round2.src = 'anh3_2.jpg';
+                   round2.alt = 3;
+                    break;
+            }
+            finish()
+        }
+        function click3() {
+            let Random = Math.floor((Math.random() * 3) + 1);
+            switch (Random) {
+                case 1:
+                    round3.src = "anh1_3.jpg";
+                    round3.alt = 1;
+                    break;
+                case 2:
+                    round3.src = "anh2_3.jpg";
+                    round3.alt = 2;
+                    break;
+                case 3:
+                    round3.src = "anh3_3.jpg";
+                    round3.alt = 3;
+            }
+            finish()
+        }
+        function check() {
+            return round1.alt +round2.alt + round3.alt === "111" || round1.alt +round2.alt + round3.alt === "222" ||
+            round1.alt +round2.alt + round3.alt === "333"
+        }
+        function finish() {
+            if (check()) {
+                document.getElementById("change").style = "box-shadow:2px 2px 30px 10px yellowgreen; width: 300px;"
+            }
+            else {
+                document.getElementById("change").style = "width: 300px;"
+            }
+        }
+    </script>
+</body>
+
+</html>
