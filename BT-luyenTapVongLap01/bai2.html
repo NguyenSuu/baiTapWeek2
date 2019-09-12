@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let temperature;
+        do{
+            temperature=parseInt(prompt("Enter temperature"));
+            if(!isNaN(temperature)){
+               break;
+            }else alert("Enter a number");
+        }while(isNaN(temperature));
+        function check(){
+            if(temperature>100){
+                    alert("decrease the temperature");
+                }else if(temperature<20){
+                    alert("increase the temperature");
+                }else{
+                    alert("nomal");}
+        }check(temperature);
+    </script>
+</body>
+</html>

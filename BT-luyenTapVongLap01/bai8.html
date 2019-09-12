@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        input[type="submit"] {
+            position:absolute;
+            top: 40%;
+            left: 40%;
+            height: 80px;
+            width:120px;
+            -webkit-appearance: none;
+            background: #c6c6c6;
+            outline: none;
+            border-radius: 20px;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.247);
+            transition: .5s;
+        }
+    </style>
+    <input type="submit" id="button" value="Begin" onclick="Rand()">
+    <script>
+        function Rand() {
+            let round1 = parseInt(prompt("Nhập phạm vi số, số bắt đầu ")),
+                round2 = parseInt(prompt("Nhập phạm vi số, số cuối ")),
+                channceNumber = Math.floor((Math.random() * (round2 - round1)) + round1);
+            for (let i = 1; i < 4; i++) {
+                let test = parseInt(prompt("Số mà bạn đoán"));
+                if (channceNumber === test) {
+                    alert("Đúng rồi :))");
+                    break;
+                } else {
+                    alert("Thử lại xem");
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
