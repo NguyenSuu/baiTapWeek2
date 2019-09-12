@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var text = prompt("Enter something");
+        var UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        var LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        var result = [];
+
+        for (var x = 0; x < text.length; x++) {
+            if (UPPER.indexOf(text[x]) !== -1) {
+                result.push(text[x].toLowerCase());
+            }
+            else if (LOWER.indexOf(text[x]) !== -1) {
+                result.push(text[x].toUpperCase());
+            }
+            else {
+                result.push(text[x]);
+            }
+        }
+        document.write(result.join(''));
+    </script>
+</body>
+
+</html>

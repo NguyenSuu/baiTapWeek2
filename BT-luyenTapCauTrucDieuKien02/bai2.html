@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <h2>Mét</h2>
+        <input type="text" id="valueM"></inpur>
+        <input type="submit" value="Change" onclick="check()">
+        <p id="result"></p>
+        <script>
+            function check() {
+                let m = document.getElementById("valueM").value;
+                let ft;
+                ft = m *3.2808;
+                document.getElementById("result").innerHTML="ft(Feet) = "+ft;
+            }
+    
+        </script>
+</body>
+</html>

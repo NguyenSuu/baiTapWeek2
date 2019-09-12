@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Diện tích hình vuông</legend>
+        <h3>Cạnh hình vuông</h3>
+        <input type="text" id="valueA"></inpur>
+        <input type="submit" value="Finish" onclick="check()">
+        <p id="result">Result: </p>
+    </fieldset>
+    <script>
+        function check() {
+            let a = document.getElementById("valueA").value;
+            let s;
+            s = a * a;
+            document.getElementById("result").innerHTML = "Result: Diện tích là " + s;
+        }
+
+    </script>
+</body>
+
+</html>

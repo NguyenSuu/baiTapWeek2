@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <fieldset>
+        <legend>Phương trình ax+b=0</legend>
+        <h3>Nhập a</h3>
+        <input type="text" id="valueA"></inpur>
+        <h3>Nhập b</h3>
+        <input type="text" id="valueB"></inpur>
+        <input type="submit" value="Finish" onclick="check()">
+        <p id="result">Result: </p>
+    </fieldset>
+
+    <script>
+        function check() {
+            let value1 = document.getElementById("valueA").value;
+            let value2 = document.getElementById("valueB").value;
+            let x;//x là nghiệm phương trình
+            x = (-value1) / value2;
+            document.getElementById("result").innerHTML = "Result: Nghiệm của phương trình là " + x;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>Diện tích hình chữ nhật</legend>
+        <h3>Chiều dài</h3>
+        <input type="text" id="long"></inpur>
+        <h3>Chiều rộng</h3>
+        <input type="text" id="width"></inpur>
+        <input type="submit" value="Finish" onclick="check()">
+        <p id="result">Result: </p>
+    </fieldset>
+    <script>
+        function check() {
+            let long = document.getElementById("long").value;
+            let width = document.getElementById("width").value;
+            let s;
+            s = long * width;
+            document.getElementById("result").innerHTML = "Result: Diện tích là " + s;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,18 @@
     <title>Document</title>
 </head>
 <body>
+    <h2>Độ C</h2>
+    <input type="text" id="valueC"></inpur>
+    <input type="submit" value="Change" onclick="check()">
+    <p id="result"></p>
     <script>
-        do{
-            let C=parseInt(prompt("Enter C"));
-            
+        function check() {
+            let C = document.getElementById("valueC").value;
+            let F;
+            F = C * 9 / 5 + 32;
+            document.getElementById("result").innerHTML="F = "+F;
         }
+
     </script>
 </body>
 </html>
